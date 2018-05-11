@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-11T04:01:49.425Z</updated>
+  <updated>2018-05-11T10:59:01.339Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>android 上传library到jcenter</title>
+    <link href="http://yoursite.com/2018/05/11/upload-to-maven/"/>
+    <id>http://yoursite.com/2018/05/11/upload-to-maven/</id>
+    <published>2018-05-11T10:25:29.000Z</published>
+    <updated>2018-05-11T10:59:01.339Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="gradle" scheme="http://yoursite.com/categories/gradle/"/>
+    
+    
+      <category term="gralde" scheme="http://yoursite.com/tags/gralde/"/>
+    
+  </entry>
   
   <entry>
     <title>stickyHeader</title>
