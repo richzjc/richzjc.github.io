@@ -341,11 +341,22 @@
 <li>点击import from github<br><img src="http://p8k4f5rra.bkt.clouddn.com/WechatIMG37.jpeg" alt=""></li>
 <li>选中要导入的库，点击inport respositories即可<br><img src="http://p8k4f5rra.bkt.clouddn.com/select_github_project.jpeg" alt=""></li>
 <li>在第二个步骤的页面下，刷新页面，你会看到上一步导入的项目<br><img src="http://p8k4f5rra.bkt.clouddn.com/view_inport_project.jpeg" alt=""></li>
-<li><p>点击导入的项目，跳转到下一个页面，在点击顶部的的edit按钮，跳转到下一个页面，选择licence 为apache-2.0即可<br><img src="http://p8k4f5rra.bkt.clouddn.com/SELECT_LICENCE.jpeg" alt=""></p>
+<li>点击导入的项目，跳转到下一个页面，在点击顶部的的edit按钮，跳转到下一个页面，选择licence 为apache-2.0即可<br><img src="http://p8k4f5rra.bkt.clouddn.com/SELECT_LICENCE.jpeg" alt=""></li>
+</ul>
 <h1 id="接下来就是用bintray-relase插件来上传到maven"><a href="#接下来就是用bintray-relase插件来上传到maven" class="headerlink" title="接下来就是用bintray relase插件来上传到maven"></a>接下来就是用bintray relase插件来上传到maven</h1><ul>
 <li><a href="https://github.com/novoda/bintray-release" target="_blank" rel="noopener">打开bintray relase 插件</a></li>
-</ul>
-</li>
+<li><p>在需要上传到maven的library添加如下的代码：</p>
+<h4 id="在build-gradle文件添加插件"><a href="#在build-gradle文件添加插件" class="headerlink" title="在build.gradle文件添加插件"></a>在build.gradle文件添加插件</h4><pre><code>  apply plugin: &apos;com.novoda.bintray-release&apos;
+
+  buildscript {
+   repositories {
+       jcenter()
+   }
+   dependencies {
+       classpath &apos;com.novoda:bintray-release:&lt;latest-version&gt;&apos;
+   }
+}
+</code></pre></li>
 </ul>
 
           
