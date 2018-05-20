@@ -370,17 +370,37 @@
 <h1 id="接下来就是用bintray-relase插件来上传到maven"><a href="#接下来就是用bintray-relase插件来上传到maven" class="headerlink" title="接下来就是用bintray relase插件来上传到maven"></a>接下来就是用bintray relase插件来上传到maven</h1><ul>
 <li><a href="https://github.com/novoda/bintray-release" target="_blank" rel="noopener">打开bintray relase 插件</a></li>
 <li><p>在需要上传到maven的library添加如下的代码：</p>
-<h4 id="在build-gradle文件添加插件"><a href="#在build-gradle文件添加插件" class="headerlink" title="在build.gradle文件添加插件"></a>在build.gradle文件添加插件</h4><pre><code>  apply plugin: &apos;com.novoda.bintray-release&apos;
+<h4 id="在build-gradle文件添加插件"><a href="#在build-gradle文件添加插件" class="headerlink" title="在build.gradle文件添加插件"></a>在build.gradle文件添加插件</h4><pre><code>apply plugin: &apos;com.novoda.bintray-release&apos;
 
-  buildscript {
-   repositories {
-       jcenter()
-   }
-   dependencies {
-       classpath &apos;com.novoda:bintray-release:&lt;latest-version&gt;&apos;
-   }
+ buildscript {
+  repositories {
+      jcenter()
+  }
+  dependencies {
+      classpath &apos;com.novoda:bintray-release:&lt;latest-version&gt;&apos;
+  }
 }
 </code></pre></li>
+<li><p>接下来就是在需要上传的library配置下面的核心代码</p>
+<pre><code>publish {
+    userOrg = &apos;novoda&apos;
+    groupId = &apos;com.novoda&apos;
+    artifactId = &apos;bintray-release&apos;
+    publishVersion = &apos;0.6.1&apos;
+    desc = &apos;Oh hi, this is a nice description for a project, right?&apos;
+    website = &apos;https://github.com/novoda/bintray-release&apos;
+}
+</code></pre><p>注意： </p>
+<p><code>artifactId 必须与导入进来的名字要保持一致，
+当前的artifactId为Colorful.  desc与website我平时上传是没有写的</code></p>
+</li>
+<li><p>接下来就是执行下面这一句命令</p>
+<pre><code>./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
+</code></pre><p><code>BINTRAY_USERNAME： 替换成在bintray网站上注册的用户名</code></p>
+<p><code>BINTRAY_KEY： 为注册用户的apikey</code></p>
+<p>如：</p>
+<p><img src="http://p8k4f5rra.bkt.clouddn.com/bintray_api_key.jpeg" alt=""></p>
+</li>
 </ul>
 
           
@@ -493,7 +513,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

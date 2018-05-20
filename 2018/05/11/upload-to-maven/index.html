@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="gralde," />
+  <meta name="keywords" content="上传," />
 
 
 
@@ -82,7 +82,7 @@
 
 
 <meta name="description" content="简介在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤 登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github 选">
-<meta name="keywords" content="gralde">
+<meta name="keywords" content="上传">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android 上传library到jcenter">
 <meta property="og:url" content="http://yoursite.com/2018/05/11/upload-to-maven/index.html">
@@ -94,7 +94,8 @@
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/select_github_project.jpeg">
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/view_inport_project.jpeg">
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/SELECT_LICENCE.jpeg">
-<meta property="og:updated_time" content="2018-05-14T05:55:34.731Z">
+<meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/bintray_api_key.jpeg">
+<meta property="og:updated_time" content="2018-05-20T12:32:09.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android 上传library到jcenter">
 <meta name="twitter:description" content="简介在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤 登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github 选">
@@ -373,17 +374,37 @@
 <h1 id="接下来就是用bintray-relase插件来上传到maven"><a href="#接下来就是用bintray-relase插件来上传到maven" class="headerlink" title="接下来就是用bintray relase插件来上传到maven"></a>接下来就是用bintray relase插件来上传到maven</h1><ul>
 <li><a href="https://github.com/novoda/bintray-release" target="_blank" rel="noopener">打开bintray relase 插件</a></li>
 <li><p>在需要上传到maven的library添加如下的代码：</p>
-<h4 id="在build-gradle文件添加插件"><a href="#在build-gradle文件添加插件" class="headerlink" title="在build.gradle文件添加插件"></a>在build.gradle文件添加插件</h4><pre><code>  apply plugin: &apos;com.novoda.bintray-release&apos;
+<h4 id="在build-gradle文件添加插件"><a href="#在build-gradle文件添加插件" class="headerlink" title="在build.gradle文件添加插件"></a>在build.gradle文件添加插件</h4><pre><code>apply plugin: &apos;com.novoda.bintray-release&apos;
 
-  buildscript {
-   repositories {
-       jcenter()
-   }
-   dependencies {
-       classpath &apos;com.novoda:bintray-release:&lt;latest-version&gt;&apos;
-   }
+ buildscript {
+  repositories {
+      jcenter()
+  }
+  dependencies {
+      classpath &apos;com.novoda:bintray-release:&lt;latest-version&gt;&apos;
+  }
 }
 </code></pre></li>
+<li><p>接下来就是在需要上传的library配置下面的核心代码</p>
+<pre><code>publish {
+    userOrg = &apos;novoda&apos;
+    groupId = &apos;com.novoda&apos;
+    artifactId = &apos;bintray-release&apos;
+    publishVersion = &apos;0.6.1&apos;
+    desc = &apos;Oh hi, this is a nice description for a project, right?&apos;
+    website = &apos;https://github.com/novoda/bintray-release&apos;
+}
+</code></pre><p>注意： </p>
+<p><code>artifactId 必须与导入进来的名字要保持一致，
+当前的artifactId为Colorful.  desc与website我平时上传是没有写的</code></p>
+</li>
+<li><p>接下来就是执行下面这一句命令</p>
+<pre><code>./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
+</code></pre><p><code>BINTRAY_USERNAME： 替换成在bintray网站上注册的用户名</code></p>
+<p><code>BINTRAY_KEY： 为注册用户的apikey</code></p>
+<p>如：</p>
+<p><img src="http://p8k4f5rra.bkt.clouddn.com/bintray_api_key.jpeg" alt=""></p>
+</li>
 </ul>
 
       
@@ -402,7 +423,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/gralde/" rel="tag"># gralde</a>
+            <a href="/tags/上传/" rel="tag"># 上传</a>
           
         </div>
       
@@ -540,7 +561,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
