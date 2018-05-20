@@ -358,8 +358,10 @@
       
         
           
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？<br>本篇博客主要介绍应用bintray release插件上传到maven.</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ul>
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><hr>
+<p>在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？<br>本篇博客主要介绍应用bintray release插件上传到maven.</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><hr>
+<ul>
 <li><a href="https://bintray.com" target="_blank" rel="noopener">登录bintray.com</a> 没有账号的自己先注册一个（推荐用github注册账号）</li>
 <li>点击mave这个条目，如下图：<br><img src="http://p8k4f5rra.bkt.clouddn.com/WechatIMG36.jpeg" alt=""></li>
 <li>点击import from github<br><img src="http://p8k4f5rra.bkt.clouddn.com/WechatIMG37.jpeg" alt=""></li>
@@ -402,6 +404,11 @@
 <p><img src="http://p8k4f5rra.bkt.clouddn.com/bintray_api_key.jpeg" alt=""></p>
 </li>
 </ul>
+<ul>
+<li>上传成功后，这时只是上传到了你的私有maven， 并不能供别人使用， 这时候需要 add to jcenter, 具体操作如下：<br><img src="http://p8k4f5rra.bkt.clouddn.com/add_to_jcenter.jpeg" alt=""></li>
+</ul>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><hr>
+<p>add to jcenter需要审核，这个时间大概一天左右吧。审核通过后，就能在代码里面使用了。<br>具体使用只需要build.gralde文件里面的dependencies 里面添加：<br><code>implemention groupId:artifactId:publishVersion</code></p>
 
           
         

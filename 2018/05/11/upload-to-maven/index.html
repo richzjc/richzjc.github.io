@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="简介在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤 登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github 选">
+<meta name="description" content="简介 在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤  登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github">
 <meta name="keywords" content="上传">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android 上传library到jcenter">
 <meta property="og:url" content="http://yoursite.com/2018/05/11/upload-to-maven/index.html">
 <meta property="og:site_name" content="richzjc">
-<meta property="og:description" content="简介在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤 登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github 选">
+<meta property="og:description" content="简介 在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤  登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/WechatIMG36.jpeg">
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/WechatIMG37.jpeg">
@@ -95,10 +95,11 @@
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/view_inport_project.jpeg">
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/SELECT_LICENCE.jpeg">
 <meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/bintray_api_key.jpeg">
-<meta property="og:updated_time" content="2018-05-20T12:32:09.866Z">
+<meta property="og:image" content="http://p8k4f5rra.bkt.clouddn.com/add_to_jcenter.jpeg">
+<meta property="og:updated_time" content="2018-05-20T12:46:02.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android 上传library到jcenter">
-<meta name="twitter:description" content="简介在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤 登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github 选">
+<meta name="twitter:description" content="简介 在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？本篇博客主要介绍应用bintray release插件上传到maven. 步骤  登录bintray.com 没有账号的自己先注册一个（推荐用github注册账号） 点击mave这个条目，如下图： 点击import from github">
 <meta name="twitter:image" content="http://p8k4f5rra.bkt.clouddn.com/WechatIMG36.jpeg">
 
 
@@ -362,8 +363,10 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？<br>本篇博客主要介绍应用bintray release插件上传到maven.</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ul>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><hr>
+<p>在平时的android开发中，对于写得一些不错的rpwr，可以上传到maven,jcenter供其它开发者使用。那么如何上传到maven,jcenter呢？<br>本篇博客主要介绍应用bintray release插件上传到maven.</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><hr>
+<ul>
 <li><a href="https://bintray.com" target="_blank" rel="noopener">登录bintray.com</a> 没有账号的自己先注册一个（推荐用github注册账号）</li>
 <li>点击mave这个条目，如下图：<br><img src="http://p8k4f5rra.bkt.clouddn.com/WechatIMG36.jpeg" alt=""></li>
 <li>点击import from github<br><img src="http://p8k4f5rra.bkt.clouddn.com/WechatIMG37.jpeg" alt=""></li>
@@ -406,6 +409,11 @@
 <p><img src="http://p8k4f5rra.bkt.clouddn.com/bintray_api_key.jpeg" alt=""></p>
 </li>
 </ul>
+<ul>
+<li>上传成功后，这时只是上传到了你的私有maven， 并不能供别人使用， 这时候需要 add to jcenter, 具体操作如下：<br><img src="http://p8k4f5rra.bkt.clouddn.com/add_to_jcenter.jpeg" alt=""></li>
+</ul>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><hr>
+<p>add to jcenter需要审核，这个时间大概一天左右吧。审核通过后，就能在代码里面使用了。<br>具体使用只需要build.gralde文件里面的dependencies 里面添加：<br><code>implemention groupId:artifactId:publishVersion</code></p>
 
       
     </div>
@@ -601,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接下来就是用bintray-relase插件来上传到maven"><span class="nav-number">3.</span> <span class="nav-text">接下来就是用bintray relase插件来上传到maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在build-gradle文件添加插件"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">在build.gradle文件添加插件</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接下来就是用bintray-relase插件来上传到maven"><span class="nav-number">3.</span> <span class="nav-text">接下来就是用bintray relase插件来上传到maven</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在build-gradle文件添加插件"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">在build.gradle文件添加插件</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li></ol></div>
             
 
           </div>
