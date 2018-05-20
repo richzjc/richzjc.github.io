@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/calendar-select/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/11/stickyHeader/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="richzjc">
@@ -273,7 +273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/06/calendar-select/" itemprop="url">仿携程的日历选择控件</a></h1>
+                <a class="post-title-link" href="/2018/05/11/stickyHeader/" itemprop="url">stickyHeader</a></h1>
         
 
         <div class="post-meta">
@@ -285,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T14:31:32+08:00">
-                2018-05-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-11T11:49:54+08:00">
+                2018-05-11
               </time>
             
 
@@ -326,9 +326,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/06/calendar-select/#comments" itemprop="discussionUrl">
+                <a href="/2018/05/11/stickyHeader/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/06/calendar-select/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/05/11/stickyHeader/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -358,52 +358,7 @@
       
         
           
-            <h1 id="Calendar-Select"><a href="#Calendar-Select" class="headerlink" title="Calendar_Select"></a>Calendar_Select</h1><p>日历选择这个库支持单选日期以及选择时间段，<br>并且可以设置第一次进入 是选中第一天，还是当天， 还是最后一天。<br>废话少说了，直接上效果图</p>
-<h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="http://p8k4f5rra.bkt.clouddn.com/single.gif" alt=""></p>
-<p><img src="http://p8k4f5rra.bkt.clouddn.com/mult.gif" alt=""></p>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><pre><code>implementation &apos;com.richzjc:calendar_select:1.0.0&apos;
-</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p><strong>示例</strong></p>
-<pre><code>&lt;com.rich.library.CalendarSelectView
-        android:layout_width=&quot;match_parent&quot;
-        android:layout_height=&quot;match_parent&quot;
-        android:id=&quot;@+id/calendar_select&quot;
-        android:clickable=&quot;true&quot;
-        app:locate_position=&quot;today&quot;
-        app:select_type=&quot;mult&quot;&gt;
-</code></pre><p>select_type 属性有如下：</p>
-<ul>
-<li>mult（选择时间段）</li>
-<li>single （单选日期）</li>
-</ul>
-<p>locate_position属性如下：</p>
-<ul>
-<li>start (初始选中开始)</li>
-<li>today（初始选中当天，如果当天不在范围之内，则选中最后一天）</li>
-<li>end （初始选中最后一天）</li>
-</ul>
-<p>获取选中的日期 以及区间段，<code>只需要给当前控件设置这个callback即可</code></p>
-<pre><code>ConfirmSelectDateCallback selectDateCallback = new ConfirmSelectDateCallback() {
-        @Override
-        public void selectSingleDate(DayTimeEntity timeEntity) {
-            //TODO 单选回调此方法
-        }
-
-        @Override
-        public void selectMultDate(DayTimeEntity startTimeEntity, DayTimeEntity endTimeEntity) {
-            //TODO 选择时间段回调些方法
-        }
-    };
-</code></pre><p><code>调用此方法： setConfirmCallback(selectDateCallback);</code></p>
-<p>该控件默认的时间区间是： 向前一年，向后三个月， 如果需要更改控件的时间区间，请调用如下方法：</p>
-<pre><code>setCalendarRange(Calendar startCalendar, Calendar endCalendar, DayTimeEntity startDayTime, DayTimeEntity endDayTime) 
-</code></pre><p><strong>参数说明</strong></p>
-<p>startCalendar: 该控件展示的起始月份</p>
-<p>endCalendar: 该控件展示的结束月份</p>
-<p>startDayTime: 控制能点击的日期，只有在startDayTime 和 endDayTime之前的日期是可点击的</p>
-<p>endDayTime: 控制能点击的日期，只有在startDayTime 和 endDayTime之前的日期是可点击的</p>
-<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p><a href="https://github.com/richzjc/calendar_select" target="_blank" rel="noopener">github地址</a></p>
-<p><strong>欢迎各位fork 和 star</strong></p>
-
+            
           
         
       
@@ -442,7 +397,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -492,7 +447,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -503,7 +458,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -514,7 +469,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
