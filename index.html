@@ -404,7 +404,98 @@ for (i in 1 until 10) {   // i in [1, 10) 排除了 10
      println(i)
 }
 </code></pre><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><hr>
+<h4 id="1-基本数据类型"><a href="#1-基本数据类型" class="headerlink" title="1. 基本数据类型"></a>1. 基本数据类型</h4><pre><code>Double
+Float
+Int
+Short    
+Byte
+Long
+</code></pre><p>####2. 表示法</p>
+<pre><code>val oneMillion = 1_000_000
+val creditCardNumber = 1234_5678_9012_3456L
+val socialSecurityNumber = 999_99_9999L
+val hexBytes = 0xFF_EC_DE_5E
+val bytes = 0b11010010_01101001_10010100_10010010
+</code></pre><p>####3. 比较</p>
+<pre><code>== ： 表示值相等
+===： 表示引用相等
+</code></pre><p>####4. 字符串</p>
+<p>主要看明白三个引号括起来的作用</p>
+<pre><code>val text = &quot;&quot;&quot;
+    |多行字符串
+    |菜鸟教程
+    |多行字符串
+    |Runoob
+    &quot;&quot;&quot;.trimMargin()
+</code></pre><h1 id="条件控件"><a href="#条件控件" class="headerlink" title="条件控件"></a>条件控件</h1><hr>
+<p>####1. 常用的操作符（重点写一下when的用法）</p>
+<pre><code>if的用法 ：
+when的用法：
 
+用法一：
+
+when (x) {
+    1 -&gt; print(&quot;x == 1&quot;)
+    2 -&gt; print(&quot;x == 2&quot;)
+    else -&gt; { // 注意这个块
+        print(&quot;x 不是 1 ，也不是 2&quot;)
+    }
+}
+
+用法二：
+when (x) {
+    0, 1 -&gt; print(&quot;x == 0 or x == 1&quot;)
+    else -&gt; print(&quot;otherwise&quot;)
+}
+
+用法三：
+when (x) {
+    in 1..10 -&gt; print(&quot;x is in the range&quot;)
+    in validNumbers -&gt; print(&quot;x is valid&quot;)
+    !in 10..20 -&gt; print(&quot;x is outside the range&quot;)
+    else -&gt; print(&quot;none of the above&quot;)
+}
+
+用法四：
+fun hasPrefix(x: Any) = when(x) {
+    is String -&gt; x.startsWith(&quot;prefix&quot;)
+    else -&gt; false
+}
+
+用法五： 
+when {
+    x.isOdd() -&gt; print(&quot;x is odd&quot;)
+    x.isEven() -&gt; print(&quot;x is even&quot;)
+    else -&gt; print(&quot;x is funny&quot;)
+}
+</code></pre><h1 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h1><hr>
+<p>####1. 循环的关键字</p>
+<pre><code>for:
+while:
+do...while:
+
+主要看一下for的用法：
+
+for (i in array.indices) {
+    print(array[i])
+}
+
+for ((index, value) in array.withIndex()) {
+    println(&quot;the element at $index is $value&quot;)
+}
+</code></pre><p>####2. 返回与跳转</p>
+<pre><code>break
+continue
+return
+
+标签格式： loop@
+如：
+loop@ for (i in 1..100) {
+    for (j in 1..100) {
+        if (……) break@loop
+    }
+}
+</code></pre>
           
         
       
