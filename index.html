@@ -410,17 +410,14 @@ Int
 Short    
 Byte
 Long
-</code></pre><p>####2. 表示法</p>
-<pre><code>val oneMillion = 1_000_000
+</code></pre><h4 id="2-表示法"><a href="#2-表示法" class="headerlink" title="2. 表示法"></a>2. 表示法</h4><pre><code>val oneMillion = 1_000_000
 val creditCardNumber = 1234_5678_9012_3456L
 val socialSecurityNumber = 999_99_9999L
 val hexBytes = 0xFF_EC_DE_5E
 val bytes = 0b11010010_01101001_10010100_10010010
-</code></pre><p>####3. 比较</p>
-<pre><code>== ： 表示值相等
+</code></pre><h4 id="3-比较"><a href="#3-比较" class="headerlink" title="3. 比较"></a>3. 比较</h4><pre><code>== ： 表示值相等
 ===： 表示引用相等
-</code></pre><p>####4. 字符串</p>
-<p>主要看明白三个引号括起来的作用</p>
+</code></pre><h4 id="4-字符串"><a href="#4-字符串" class="headerlink" title="4. 字符串"></a>4. 字符串</h4><p>主要看明白三个引号括起来的作用</p>
 <pre><code>val text = &quot;&quot;&quot;
     |多行字符串
     |菜鸟教程
@@ -428,8 +425,7 @@ val bytes = 0b11010010_01101001_10010100_10010010
     |Runoob
     &quot;&quot;&quot;.trimMargin()
 </code></pre><h1 id="条件控件"><a href="#条件控件" class="headerlink" title="条件控件"></a>条件控件</h1><hr>
-<p>####1. 常用的操作符（重点写一下when的用法）</p>
-<pre><code>if的用法 ：
+<h4 id="1-常用的操作符（重点写一下when的用法）"><a href="#1-常用的操作符（重点写一下when的用法）" class="headerlink" title="1. 常用的操作符（重点写一下when的用法）"></a>1. 常用的操作符（重点写一下when的用法）</h4><pre><code>if的用法 ：
 when的用法：
 
 用法一：
@@ -469,8 +465,7 @@ when {
     else -&gt; print(&quot;x is funny&quot;)
 }
 </code></pre><h1 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h1><hr>
-<p>####1. 循环的关键字</p>
-<pre><code>for:
+<h4 id="1-循环的关键字"><a href="#1-循环的关键字" class="headerlink" title="1. 循环的关键字"></a>1. 循环的关键字</h4><pre><code>for:
 while:
 do...while:
 
@@ -483,8 +478,7 @@ for (i in array.indices) {
 for ((index, value) in array.withIndex()) {
     println(&quot;the element at $index is $value&quot;)
 }
-</code></pre><p>####2. 返回与跳转</p>
-<pre><code>break
+</code></pre><h4 id="2-返回与跳转"><a href="#2-返回与跳转" class="headerlink" title="2. 返回与跳转"></a>2. 返回与跳转</h4><pre><code>break
 continue
 return
 
@@ -495,7 +489,8 @@ loop@ for (i in 1..100) {
         if (……) break@loop
     }
 }
-</code></pre>
+</code></pre><h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><hr>
+
           
         
       

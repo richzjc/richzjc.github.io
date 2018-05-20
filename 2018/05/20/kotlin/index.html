@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="richzjc">
 <meta property="og:description" content="基础语法 1. 默认导入kotlin.* kotlin.annotation.* kotlin.collections.* kotlin.comparisons.* kotlin.io.* kotlin.ranges.* kotlin.sequences.* kotlin.text.* 2. 函数定义fun sum(a: Int, b: Int): Int {   // Int 参数，返回值 In">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T07:27:49.912Z">
+<meta property="og:updated_time" content="2018-05-20T07:30:28.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kotlin 基础语法">
 <meta name="twitter:description" content="基础语法 1. 默认导入kotlin.* kotlin.annotation.* kotlin.collections.* kotlin.comparisons.* kotlin.io.* kotlin.ranges.* kotlin.sequences.* kotlin.text.* 2. 函数定义fun sum(a: Int, b: Int): Int {   // Int 参数，返回值 In">
@@ -407,17 +407,14 @@ Int
 Short    
 Byte
 Long
-</code></pre><p>####2. 表示法</p>
-<pre><code>val oneMillion = 1_000_000
+</code></pre><h4 id="2-表示法"><a href="#2-表示法" class="headerlink" title="2. 表示法"></a>2. 表示法</h4><pre><code>val oneMillion = 1_000_000
 val creditCardNumber = 1234_5678_9012_3456L
 val socialSecurityNumber = 999_99_9999L
 val hexBytes = 0xFF_EC_DE_5E
 val bytes = 0b11010010_01101001_10010100_10010010
-</code></pre><p>####3. 比较</p>
-<pre><code>== ： 表示值相等
+</code></pre><h4 id="3-比较"><a href="#3-比较" class="headerlink" title="3. 比较"></a>3. 比较</h4><pre><code>== ： 表示值相等
 ===： 表示引用相等
-</code></pre><p>####4. 字符串</p>
-<p>主要看明白三个引号括起来的作用</p>
+</code></pre><h4 id="4-字符串"><a href="#4-字符串" class="headerlink" title="4. 字符串"></a>4. 字符串</h4><p>主要看明白三个引号括起来的作用</p>
 <pre><code>val text = &quot;&quot;&quot;
     |多行字符串
     |菜鸟教程
@@ -425,8 +422,7 @@ val bytes = 0b11010010_01101001_10010100_10010010
     |Runoob
     &quot;&quot;&quot;.trimMargin()
 </code></pre><h1 id="条件控件"><a href="#条件控件" class="headerlink" title="条件控件"></a>条件控件</h1><hr>
-<p>####1. 常用的操作符（重点写一下when的用法）</p>
-<pre><code>if的用法 ：
+<h4 id="1-常用的操作符（重点写一下when的用法）"><a href="#1-常用的操作符（重点写一下when的用法）" class="headerlink" title="1. 常用的操作符（重点写一下when的用法）"></a>1. 常用的操作符（重点写一下when的用法）</h4><pre><code>if的用法 ：
 when的用法：
 
 用法一：
@@ -466,8 +462,7 @@ when {
     else -&gt; print(&quot;x is funny&quot;)
 }
 </code></pre><h1 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h1><hr>
-<p>####1. 循环的关键字</p>
-<pre><code>for:
+<h4 id="1-循环的关键字"><a href="#1-循环的关键字" class="headerlink" title="1. 循环的关键字"></a>1. 循环的关键字</h4><pre><code>for:
 while:
 do...while:
 
@@ -480,8 +475,7 @@ for (i in array.indices) {
 for ((index, value) in array.withIndex()) {
     println(&quot;the element at $index is $value&quot;)
 }
-</code></pre><p>####2. 返回与跳转</p>
-<pre><code>break
+</code></pre><h4 id="2-返回与跳转"><a href="#2-返回与跳转" class="headerlink" title="2. 返回与跳转"></a>2. 返回与跳转</h4><pre><code>break
 continue
 return
 
@@ -492,7 +486,8 @@ loop@ for (i in 1..100) {
         if (……) break@loop
     }
 }
-</code></pre>
+</code></pre><h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><hr>
+
       
     </div>
     
@@ -683,7 +678,7 @@ loop@ for (i in 1..100) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础语法"><span class="nav-number">1.</span> <span class="nav-text">基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-默认导入"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1. 默认导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-函数定义"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2. 函数定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-关键字"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3. 关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-字符串模板"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">4. 字符串模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-空指针检查"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">5. 空指针检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-区间判断"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">6. 区间判断</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">2.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基本数据类型"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">1. 基本数据类型</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件控件"><span class="nav-number">3.</span> <span class="nav-text">条件控件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环控制"><span class="nav-number">4.</span> <span class="nav-text">循环控制</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础语法"><span class="nav-number">1.</span> <span class="nav-text">基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-默认导入"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1. 默认导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-函数定义"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2. 函数定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-关键字"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3. 关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-字符串模板"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">4. 字符串模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-空指针检查"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">5. 空指针检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-区间判断"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">6. 区间判断</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">2.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基本数据类型"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">1. 基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-表示法"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">2. 表示法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-比较"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">3. 比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-字符串"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">4. 字符串</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件控件"><span class="nav-number">3.</span> <span class="nav-text">条件控件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-常用的操作符（重点写一下when的用法）"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">1. 常用的操作符（重点写一下when的用法）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环控制"><span class="nav-number">4.</span> <span class="nav-text">循环控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-循环的关键字"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">1. 循环的关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-返回与跳转"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">2. 返回与跳转</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类与对象"><span class="nav-number">5.</span> <span class="nav-text">类与对象</span></a></li></ol></div>
             
 
           </div>
