@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-20T07:30:28.768Z</updated>
+  <updated>2018-06-07T14:31:08.495Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习rxjava 常用操作符</title>
+    <link href="http://yoursite.com/2018/06/07/rxjava/"/>
+    <id>http://yoursite.com/2018/06/07/rxjava/</id>
+    <published>2018-06-07T14:25:46.000Z</published>
+    <updated>2018-06-07T14:31:08.495Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在android
+        
+      
+    
+    </summary>
+    
+      <category term="android" scheme="http://yoursite.com/categories/android/"/>
+    
+    
+      <category term="rxjava" scheme="http://yoursite.com/tags/rxjava/"/>
+    
+  </entry>
   
   <entry>
     <title>kotlin 基础语法</title>

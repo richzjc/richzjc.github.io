@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="richzjc, hexo, 博客" />
+  <meta name="keywords" content="rxjava," />
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="看得多不如写得多。 方法不对，努力白费。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="richzjc">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。">
+<meta name="keywords" content="rxjava">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习rxjava 常用操作符">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/rxjava/index.html">
 <meta property="og:site_name" content="richzjc">
-<meta property="og:description" content="看得多不如写得多。 方法不对，努力白费。">
+<meta property="og:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-07T14:31:08.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="richzjc">
-<meta name="twitter:description" content="看得多不如写得多。 方法不对，努力白费。">
+<meta name="twitter:title" content="学习rxjava 常用操作符">
+<meta name="twitter:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/07/rxjava/"/>
 
 
 
 
 
-  <title>归档 | richzjc</title>
+  <title>学习rxjava 常用操作符 | richzjc</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,259 +241,199 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/rxjava/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="richzjc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="richzjc">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">学习rxjava 常用操作符</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-07T22:25:46+08:00">
+                2018-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/07/rxjava/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/07/rxjava/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/07/rxjava/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">学习rxjava 常用操作符</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  72
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-07T22:25:46+08:00"
-              content="2018-06-07" >
-          06-07
-        </time>
-      </div>
+              
 
-    </header>
-  </article>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/20/kotlin/" itemprop="url">
-              
-                <span itemprop="name">kotlin 基础语法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-20T08:30:32+08:00"
-              content="2018-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/14/markdown/" itemprop="url">
-              
-                <span itemprop="name">markdown 常用标签</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-14T14:29:03+08:00"
-              content="2018-05-14" >
-          05-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。<br>那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发<br>中使用得不够熟练的操作符做一点总结。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/11/upload-to-maven/" itemprop="url">
-              
-                <span itemprop="name">android 上传library到jcenter</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-11T18:25:29+08:00"
-              content="2018-05-11" >
-          05-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/11/stickyHeader/" itemprop="url">
-              
-                <span itemprop="name">stickyHeader</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-11T11:49:54+08:00"
-              content="2018-05-11" >
-          05-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/06/calendar-select/" itemprop="url">
-              
-                <span itemprop="name">仿携程的日历选择控件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-06T14:31:32+08:00"
-              content="2018-05-06" >
-          05-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/rxjava/" rel="tag"># rxjava</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/20/kotlin/" rel="next" title="kotlin 基础语法">
+                <i class="fa fa-chevron-left"></i> kotlin 基础语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -499,6 +441,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -731,6 +687,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -748,6 +708,18 @@
       <script id="dsq-count-scr" src="https://richzjc.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/06/07/rxjava/';
+          this.page.identifier = '2018/06/07/rxjava/';
+          this.page.title = '学习rxjava 常用操作符';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://richzjc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
