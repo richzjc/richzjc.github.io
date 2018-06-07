@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。">
+<meta name="description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。 just操作符 observable.just(1,2 3) 注意： just操作符最多只能传9个 fromArrayInteger[] a = {1, 2 ,3}; Observable.fromArray(a">
 <meta name="keywords" content="rxjava">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习rxjava 常用操作符">
 <meta property="og:url" content="http://yoursite.com/2018/06/07/rxjava/index.html">
 <meta property="og:site_name" content="richzjc">
-<meta property="og:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。">
+<meta property="og:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。 just操作符 observable.just(1,2 3) 注意： just操作符最多只能传9个 fromArrayInteger[] a = {1, 2 ,3}; Observable.fromArray(a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T14:31:08.495Z">
+<meta property="og:updated_time" content="2018-06-07T15:12:09.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习rxjava 常用操作符">
-<meta name="twitter:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。">
+<meta name="twitter:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。 just操作符 observable.just(1,2 3) 注意： just操作符最多只能传9个 fromArrayInteger[] a = {1, 2 ,3}; Observable.fromArray(a">
 
 
 
@@ -349,7 +349,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  72
+                  241
                 </span>
               
 
@@ -375,7 +375,49 @@
 
       
         <p>在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。<br>那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发<br>中使用得不够熟练的操作符做一点总结。</p>
+<h1 id="just操作符"><a href="#just操作符" class="headerlink" title="just操作符"></a>just操作符</h1><hr>
+<pre><code>observable.just(1,2 3)
+注意： just操作符最多只能传9个
+</code></pre><h1 id="fromArray"><a href="#fromArray" class="headerlink" title="fromArray"></a>fromArray</h1><pre><code>Integer[] a = {1, 2 ,3};
+Observable.fromArray(a)
+注意：传递的参数是一个数组，解决了just操作符的个数限制的缺点
+</code></pre><h1 id="fromCallback"><a href="#fromCallback" class="headerlink" title="fromCallback"></a>fromCallback</h1><pre><code>Observable.fromCallable(new Callable&lt;Integer&gt;() {
+            @Override
+            public Integer call() throws Exception {
+                return 1;
+            }
+        });
+注意：参数为java.util.concurrent中的Callback对象
+</code></pre><h1 id="fromFuture-这个操作符不会用"><a href="#fromFuture-这个操作符不会用" class="headerlink" title="fromFuture(这个操作符不会用)"></a>fromFuture(这个操作符不会用)</h1><pre><code>Observable.fromFuture(new Future&lt;Integer&gt;() {
+            @Override
+            public boolean cancel(boolean mayInterruptIfRunning) {
+                return false;
+            }
 
+            @Override
+            public boolean isCancelled() {
+                return false;
+            }
+
+            @Override
+            public boolean isDone() {
+                return false;
+            }
+
+            @Override
+            public Integer get() throws InterruptedException, ExecutionException {
+                return null;
+            }
+
+            @Override
+            public Integer get(long timeout, @NonNull TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException {
+                return null;
+            }
+        });
+</code></pre><h1 id="fromIterable"><a href="#fromIterable" class="headerlink" title="fromIterable"></a>fromIterable</h1><pre><code>ArrayList list;
+Observable.fromIterable(list)
+注意： 参数是实现Iterable接口的实例，通常情况下都是list
+</code></pre><h1 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h1>
       
     </div>
     
@@ -475,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -547,6 +598,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#just操作符"><span class="nav-number">1.</span> <span class="nav-text">just操作符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromArray"><span class="nav-number">2.</span> <span class="nav-text">fromArray</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromCallback"><span class="nav-number">3.</span> <span class="nav-text">fromCallback</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromFuture-这个操作符不会用"><span class="nav-number">4.</span> <span class="nav-text">fromFuture(这个操作符不会用)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromIterable"><span class="nav-number">5.</span> <span class="nav-text">fromIterable</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#defer"><span class="nav-number">6.</span> <span class="nav-text">defer</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

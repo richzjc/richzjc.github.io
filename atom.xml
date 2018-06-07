@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-07T14:31:08.495Z</updated>
+  <updated>2018-06-07T15:12:09.882Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/06/07/rxjava/"/>
     <id>http://yoursite.com/2018/06/07/rxjava/</id>
     <published>2018-06-07T14:25:46.000Z</published>
-    <updated>2018-06-07T14:31:08.495Z</updated>
+    <updated>2018-06-07T15:12:09.882Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;p&gt;在android
+          &lt;p&gt;在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。&lt;br&gt;那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发&lt;br&gt;中使用得不够熟练的操作符做一点总结。&lt;/p&gt;
+&lt;h1 id=&quot;just操作符&quot;&gt;&lt;a
         
       
     
