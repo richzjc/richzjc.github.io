@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="richzjc">
 <meta property="og:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。 just操作符 observable.just(1,2 3) 注意： just操作符最多只能传9个 fromArrayInteger[] a = {1, 2 ,3}; Observable.fromArray(a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T15:12:09.882Z">
+<meta property="og:updated_time" content="2018-06-07T16:10:39.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习rxjava 常用操作符">
 <meta name="twitter:description" content="在android 开发中，充分利用rxjava编程会使得代码的可读性变得更强。那在rxjava到底有哪些比较常用的操作符呢？接下来我主要对我自己在开发中使用得不够熟练的操作符做一点总结。 just操作符 observable.just(1,2 3) 注意： just操作符最多只能传9个 fromArrayInteger[] a = {1, 2 ,3}; Observable.fromArray(a">
@@ -349,7 +349,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  241
+                  607
                 </span>
               
 
@@ -417,7 +417,64 @@ Observable.fromArray(a)
 </code></pre><h1 id="fromIterable"><a href="#fromIterable" class="headerlink" title="fromIterable"></a>fromIterable</h1><pre><code>ArrayList list;
 Observable.fromIterable(list)
 注意： 参数是实现Iterable接口的实例，通常情况下都是list
-</code></pre><h1 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h1>
+</code></pre><h1 id="timer"><a href="#timer" class="headerlink" title="timer"></a>timer</h1><pre><code>Observable.timer(long delay, TimeUnit unit)
+注意： 延迟delay后只发射一次事件，发射0
+</code></pre><h1 id="interval"><a href="#interval" class="headerlink" title="interval"></a>interval</h1><pre><code>Observable.interval()
+看一下源码就知道每一个参数是什么意思了
+</code></pre><h1 id="intervalRange"><a href="#intervalRange" class="headerlink" title="intervalRange"></a>intervalRange</h1><pre><code>Observable.intervalRange(long start, long count, long delay, long period, TimeUnit unit)
+start: 开始
+count: 发射的数量
+delay: 发送第一次的延时
+perios: 后续每发射一次的时间间隔
+unit: 时间单位
+</code></pre><h1 id="range-rangeLong"><a href="#range-rangeLong" class="headerlink" title="range rangeLong"></a>range rangeLong</h1><pre><code>range(int start, int count)
+rangeLong(long start, long count)
+看参数就能明白什么意思
+</code></pre><h1 id="empty-nerver-error"><a href="#empty-nerver-error" class="headerlink" title="empty, nerver, error"></a>empty, nerver, error</h1><pre><code>Observable.empty()
+Observable.error()
+Observable.never()
+研究一下这三个方法的使用场景
+</code></pre><h1 id="map"><a href="#map" class="headerlink" title="map"></a>map</h1><h1 id="flatmap-无序"><a href="#flatmap-无序" class="headerlink" title="flatmap(无序)"></a>flatmap(无序)</h1><h1 id="concatMap-有序，对比flatmap的用法使用"><a href="#concatMap-有序，对比flatmap的用法使用" class="headerlink" title="concatMap(有序，对比flatmap的用法使用)"></a>concatMap(有序，对比flatmap的用法使用)</h1><h1 id="buffer"><a href="#buffer" class="headerlink" title="buffer"></a>buffer</h1><pre><code>buffer(int count, int skip)
+
+Observable.just(1,2,3,4)
+.buffer(2, 1)
+
+意思是：将发射的数据按照count 组合缓存起来统一发送
+
+发射的数据是： （1，2）（2，3）（3，4）
+</code></pre><h1 id="groupBy"><a href="#groupBy" class="headerlink" title="groupBy"></a>groupBy</h1><pre><code>Observable.just(1,2,3,4,5,6)
+                .groupBy(new Function&lt;Integer, Integer&gt;() {
+                    @Override
+                    public Integer apply(Integer integer) throws Exception {
+                        return 1;
+                    }
+                })
+                .map(new Function&lt;GroupedObservable&lt;Integer,Integer&gt;, String&gt;() {
+                    @Override
+                    public String apply(GroupedObservable&lt;Integer, Integer&gt; integerIntegerGroupedObservable) throws Exception {
+                        return null;
+                    }
+                })
+
+其实就是按照groupby方法里面的返回值进行分组
+</code></pre><h1 id="scan"><a href="#scan" class="headerlink" title="scan"></a>scan</h1><pre><code>Observable.just(1,2,3,4,5,6)
+                .scan(new BiFunction&lt;Integer, Integer, Integer&gt;() {
+                    @Override
+                    public Integer apply(Integer s, Integer integer) throws Exception {
+                        return null;
+                    }
+                })
+一个聚合的操作符，类似于加法，
+</code></pre><h1 id="window"><a href="#window" class="headerlink" title="window"></a>window</h1><pre><code>window(long count)
+
+Observable.just(1,2,3,4)
+.window(2)
+
+类似于buffer(2,2)
+</code></pre><h1 id="concat-concatArray"><a href="#concat-concatArray" class="headerlink" title="concat concatArray"></a>concat concatArray</h1><pre><code>传的参数类型是Observable, concatArray解决了数量上的限制
+</code></pre><h1 id="merge-mergeArray"><a href="#merge-mergeArray" class="headerlink" title="merge mergeArray"></a>merge mergeArray</h1><pre><code>原理和上面的是差不多的，只不过merge是并行发送的
+</code></pre><p>#</p>
+
       
     </div>
     
@@ -608,7 +665,7 @@ Observable.fromIterable(list)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#just操作符"><span class="nav-number">1.</span> <span class="nav-text">just操作符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromArray"><span class="nav-number">2.</span> <span class="nav-text">fromArray</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromCallback"><span class="nav-number">3.</span> <span class="nav-text">fromCallback</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromFuture-这个操作符不会用"><span class="nav-number">4.</span> <span class="nav-text">fromFuture(这个操作符不会用)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromIterable"><span class="nav-number">5.</span> <span class="nav-text">fromIterable</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#defer"><span class="nav-number">6.</span> <span class="nav-text">defer</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#just操作符"><span class="nav-number">1.</span> <span class="nav-text">just操作符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromArray"><span class="nav-number">2.</span> <span class="nav-text">fromArray</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromCallback"><span class="nav-number">3.</span> <span class="nav-text">fromCallback</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromFuture-这个操作符不会用"><span class="nav-number">4.</span> <span class="nav-text">fromFuture(这个操作符不会用)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fromIterable"><span class="nav-number">5.</span> <span class="nav-text">fromIterable</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#timer"><span class="nav-number">6.</span> <span class="nav-text">timer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#interval"><span class="nav-number">7.</span> <span class="nav-text">interval</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#intervalRange"><span class="nav-number">8.</span> <span class="nav-text">intervalRange</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#range-rangeLong"><span class="nav-number">9.</span> <span class="nav-text">range rangeLong</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#empty-nerver-error"><span class="nav-number">10.</span> <span class="nav-text">empty, nerver, error</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#map"><span class="nav-number">11.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flatmap-无序"><span class="nav-number">12.</span> <span class="nav-text">flatmap(无序)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#concatMap-有序，对比flatmap的用法使用"><span class="nav-number">13.</span> <span class="nav-text">concatMap(有序，对比flatmap的用法使用)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#buffer"><span class="nav-number">14.</span> <span class="nav-text">buffer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#groupBy"><span class="nav-number">15.</span> <span class="nav-text">groupBy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#scan"><span class="nav-number">16.</span> <span class="nav-text">scan</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#window"><span class="nav-number">17.</span> <span class="nav-text">window</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#concat-concatArray"><span class="nav-number">18.</span> <span class="nav-text">concat concatArray</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#merge-mergeArray"><span class="nav-number">19.</span> <span class="nav-text">merge mergeArray</span></a></li></ol></div>
             
 
           </div>
