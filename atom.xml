@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-17T03:25:27.300Z</updated>
+  <updated>2018-06-17T03:27:28.626Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>在系统级tablayout基础上新增加了indicatorWidth, 和 tabSelectBold属性</title>
     <link href="http://yoursite.com/2018/06/17/tablayout/"/>
     <id>http://yoursite.com/2018/06/17/tablayout/</id>
-    <published>2018-06-17T03:25:27.300Z</published>
-    <updated>2018-06-17T03:25:27.300Z</updated>
+    <published>2018-06-17T03:22:59.000Z</published>
+    <updated>2018-06-17T03:27:28.626Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,16 @@
       
         
         
-          &lt;hr&gt;
-&lt;p&gt;title: 在系统级tablayout基础上新增加了indicatorWidth, 和 tabSelectBold属性&lt;br&gt;date: 2018-06-17
+          &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;其实android
         
       
     
     </summary>
     
+      <category term="android" scheme="http://yoursite.com/categories/android/"/>
+    
+    
+      <category term="控件" scheme="http://yoursite.com/tags/%E6%8E%A7%E4%BB%B6/"/>
     
   </entry>
   
